@@ -32,6 +32,23 @@ zinetic endpoint setup
 Installing gives no access to anything by itself. Setup enrolls the device only
 after you sign in to your organization and approve the device.
 
+## Update
+
+To move an installed device to the newest release, run this as yourself:
+
+```bash
+zinetic endpoint update
+```
+
+It shows the installed and the newest release and asks before it changes
+anything. It then runs the newest release's installer, which checks every file
+and asks for administrator rights as it did when you installed. The device
+stays enrolled. `zinetic endpoint update --check` only reports whether a newer
+release is published.
+
+Releases before `p1-04-uat-20261024-g6d84500` do not have this command. Update those once with the
+install command above.
+
 ## Check a download by hand
 
 Each release lists the SHA-256 of its files in `SHA256SUMS`:
