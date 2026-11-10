@@ -57,5 +57,7 @@ Each release lists the SHA-256 of its files in `SHA256SUMS`:
 shasum -a 256 -c SHA256SUMS --ignore-missing
 ```
 
-Test releases, named `p1-04-uat-…`, are not signed or notarized. Use them only
-for authorized testing.
+Releases are named by version, such as `v0.6.0-beta.1`. A version with a
+suffix such as `-beta.1` is a test release, and the earlier test releases named
+`p1-04-uat-…` are older than every versioned release. Test releases are not
+signed or notarized. Use them only for authorized testing.
